@@ -2,7 +2,9 @@ package functions;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.AppiumDriver;
@@ -28,5 +30,8 @@ public class Base {
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
+	}
+	public boolean isPresent(List<WebElement> element) {
+		return element.size()>0;		
 	}
 }
